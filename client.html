@@ -278,55 +278,55 @@ body {text-align:center;background-color:#eb081b}
 <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<div class="sidebar">
+  <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name">JstMStudio</div>
+        <div class="logo_name">Jst multiuso posto di lavoro</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
       <li>
         <a href="home.html">
           <i class='bx bx-home'></i>
-          <span class="links_name">Home</span>
+          <span class="links_name">Casa</span>
         </a>
-         <span class="tooltip">Home</span>
+         <span class="tooltip">Casa</span>
       </li>
       <li>
        <a href="about.html">
          <i class='bx bx-info-circle'></i>
-         <span class="links_name">About</span>
+         <span class="links_name">Chi siamo</span>
        </a>
-       <span class="tooltip">About</span>
+       <span class="tooltip">Chi siamo</span>
      </li>
      <li>
      <li>
        <a href="documentation.html">
          <i class='bx bxs-info-square'></i>
-         <span class="links_name">Documentation</span>
+         <span class="links_name">Documentazione</span>
        </a>
-       <span class="tooltip">Documentation</span>
+       <span class="tooltip">Documentazione</span>
      </li>
      <li>
      <li>
        <a href="project.html">
          <i class='bx bxs-briefcase-alt-2'></i>
-         <span class="links_name">Project</span>
+         <span class="links_name">Progetto</span>
        </a>
-       <span class="tooltip">Project</span>
+       <span class="tooltip">Progetto</span>
      </li>
      <li>
        <a href="client.html">
         <i class='bx bx-user'></i>
-         <span class="links_name">Client</span>
+         <span class="links_name">Cliente</span>
        </a>
-       <span class="tooltip">Client</span>
+       <span class="tooltip">Cliente</span>
      </li>
      <li>
        <a href="web-app.html">
         <i class='bx bx-log-in'></i>
-         <span class="links_name">Web App</span>
+         <span class="links_name">Applicazione Web</span>
        </a>
-       <span class="tooltip">Web App</span>
+       <span class="tooltip">Applicazione Web</span>
      </li>
       <li>
        <a href="api.html">
@@ -338,9 +338,9 @@ body {text-align:center;background-color:#eb081b}
      <li>
        <a href="store.html">
          <i class='bx bx-store-alt'></i>
-         <span class="links_name">Store</span>
+         <span class="links_name">Negozio</span>
        </a>
-       <span class="tooltip">Store</span>
+       <span class="tooltip">Negozio</span>
      </li>
      <li>
     </ul>
@@ -350,38 +350,38 @@ body {text-align:center;background-color:#eb081b}
     <div class="forms-in">
       <div class="forms-in">
         <div id="registration-page" class="hide">
-          <h1 style="color:green;">JstMStudio Client Area</h1>
-          <h3>Sign Up</h3>
-          Email <br />
+          <h1 style="color:green;">Jst multiuso posto di lavoro Area Clienti</h1>
+          <h3>Iscrizione</h3>
+          E-mail <br />
           <input type="email" id="registration-email" /><br />
-          Confirm Email <br />
+          Conferma email <br />
           <input
             type="email"
             id="registration-reemail"
             autocomplete="disable"
           /><br />
-          Password <br />
+          Parola d'ordine <br />
           <input type="password" id="registration-password" /><br />
-          <center><button id="register">Sign Up</button></center>
-          <button id="show-login">Sign In</button>
+          <center><button id="register">Iscrizione</button></center>
+          <button id="show-login">Registrazione</button>
         </div>
 
         <div id="login-page"> 
-        <h1 style="color:green;">JstMStudio Client Area</h1>
-          <h3>Sign In</h3>
-          Email <br />
+        <h1 style="color:green;">Jst multiuso posto di lavoro Area Clienti</h1>
+          <h3>Registrazione</h3>
+          E-mail <br />
           <input type="email" id="login-email" /><br />
-          Password <br />
+          Parola d'ordine <br />
           <input type="password" id="login-password" /><br />
-          <p id="forgot-password">Forgot Password</p>
-          <center><button id="login">Sign In</button></center>
-          <button id="show-register">Sign Up</button>
+          <p id="forgot-password">Ha dimenticato la password</p>
+          <center><button id="login">Registrazione</button></center>
+          <button id="show-register">Iscrizione</button>
         </div>
 
         <div id="homepage" class="hide">
-          <button id="signout">Sign Out</button>
-          <h3>Logged In</h3>
-          <p>You are now logged into your account of JstMStudio.</p>
+          <button id="signout">Disconnessione</button>
+          <h3>Connesso</h3>
+          <p>Ora sei connesso al tuo account di Jst multiuso posto di lavoro.</p>
         </div>
       </div>
     </div>
@@ -442,11 +442,11 @@ body {text-align:center;background-color:#eb081b}
         const password = document.querySelector("#registration-password").value;
 
         if (email.trim() == "") {
-          alert("Enter Email");
+          alert("Inserisci l'email");
         } else if (password.trim().length < 7) {
-          alert("Password must be at least 7 characters");
+          alert("La password deve contenere almeno 7 caratteri");
         } else if (email != reemail) {
-          alert("emails do not match");
+          alert("le email non combaciano");
         } else {
           auth
             .createUserWithEmailAndPassword(email, password)
@@ -531,7 +531,7 @@ body {text-align:center;background-color:#eb081b}
             location.reload();
           })
           .catch(function (error) {
-            alert("error signing out, check network connection");
+            alert("errore durante la disconnessione, controllare la connessione di rete");
           });
       };
 
@@ -546,7 +546,7 @@ body {text-align:center;background-color:#eb081b}
         .addEventListener("click", () => {
           const email = document.querySelector("#login-email").value;
           if (email.trim() == "") {
-            alert("Enter Email");
+            alert("Inserisci l'email");
           } else {
             forgotPassword(email);
           }
@@ -556,10 +556,10 @@ body {text-align:center;background-color:#eb081b}
         auth
           .sendPasswordResetEmail(email)
           .then(function () {
-            alert("email sent");
+            alert("email inviata");
           })
           .catch(function (error) {
-            alert("invalid email or bad network connection");
+            alert("e-mail non valida o cattiva connessione di rete");
           });
       };
       
