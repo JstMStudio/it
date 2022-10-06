@@ -491,6 +491,34 @@ padding-right: 20px;
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.collapsible {
+  background-color: yellow;
+  color: blue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: green;
+  border-width: 5px;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  color: blue;
+  text-align: center;
+  border-style: solid;
+  border-color: green;
+  border-width: 5px;
+  font-weight: bold;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -879,6 +907,63 @@ for (i = 0; i < coll.length; i++) {
           </div>
         </div>
   </div>
+          
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="overlay-content">
+<h1>Negozio di materiali</h1>
+<p>JstMStudio ha anche un negozio di materiali. JstMStudio vende molti materiali sviluppati dallo studio su JstMStudio Material Store. JstMStudio Material Store produce materiali di alta qualità per i nostri clienti e clienti da utilizzare sul loro sito Web con un margine sul costo. JstMStudio vende materiali qui anche per finanziare alcune delle operazioni dello studio. </p>
+<br>
+<h>
+<br>
+<h2>Materiali</h2>
+<p>JstMStudio attualmente vende più tipi di materiali per siti Web a un margine del prezzo rispetto al nostro concorrente. Puoi controllare tutti i materiali venduti da JstMStudio che sono elencati di seguito.</p>
+<br>
+<button type="button" class="collapsible">Temi</button>
+<div class="contenuto">
+<p>JstMStudio vende una configurazione del tema per i nostri clienti e utenti. La configurazione dei temi JstMStudio consente agli utenti client di modificare i temi delle pagine Web nel colore che preferiscono. Attualmente forniamo 9 configurazioni in questo materiale.</p>
+<li style="text-align:left;">Prezzo: $ 30</li>
+<li style="text-align:left;">Tempo di consegna: 48 ore</li>
+<li style="text-align:left;"><a href="materials/themes.html">Demo</a></li>
+<br>
+</div>
+<br><br>
+<button type="button" class="collapsible">Pulsante collegamento ipertestuale a colori animato</button>
+<div class="contenuto">
+  <p>JstMStudio vende anche un pulsante di collegamento ipertestuale che contiene il cambio colore e un'animazione unica durante il passaggio del mouse sopra il pulsante. I clienti possono aggiungerlo ai collegamenti ipertestuali del loro sito Web per soli $ 20. </p>
+  <li style="text-align:left;">Prezzo: $ 20</li>
+<li style="text-align:left;">Tempo di consegna: 48 ore</li>
+<li style="text-align:left;"><a href="materials/animated-color-hyperlink-button.html">Demo</a></li>
+<br>
+</div>
+<br><br>
+<button type="button" class="collapsible">Filtro di ricerca con descrizione</button>
+<div class="contenuto">
+  <p>JstMStudio vende un filtro di ricerca da un elenco di articoli contenente una descrizione per ciascuno e tutti gli articoli dell'intero elenco. Il filtro di ricerca di JstMStudio cerca solo il nome o il titolo degli elementi rendendolo più accurato. Potresti averlo sul tuo sito web per soli $ 20.</p>
+    <li style="text-align:left;">Prezzo: $ 20</li>
+<li style="text-align:left;">Tempo di consegna: 48 ore</li>
+<li style="text-align:left;"><a href="materials/search-filter-with-description.html">Demo</a></li>
+<br>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+  </div>
+</div>
 
 <h1>Negozio</h1>
 <p>Jst multiuso posto di lavoro è un piccolo team con sede in Malesia. Jst multiuso posto di lavoro si concentra su molte cose, dallo sviluppo di siti Web alla scrittura di storie. Jst multiuso posto di lavoro nasce da un gruppo di giovani amici interessati alla tecnologia.</p>
@@ -908,6 +993,8 @@ for (i = 0; i < coll.length; i++) {
 <div style="font-size:30px;background-color:cyan;width:90%;text-align:center;colore:viola;padding:10px;font-weight: grassetto;stile bordo: solido;" onclick="openNav2()" id="store">Store</div>
 <br>
 <div style="font-size:30px;background-color:cyan;width:90%;text-align:center;colore:viola;padding:10px;font-weight: grassetto;stile bordo: solido;" onclick="openNav3()" id="sito web">Sito web</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="materialstore">Negozio di materiali</div>
 <br>
 <script>
 function openNav() {
@@ -940,6 +1027,14 @@ function openNav3() {
 
 function closeNav3() {
   document.getElementById("myNav3").style.width = "0%";
+}
+
+function openNav4() {
+  document.getElementById("myNav4").style.width = "100%";
+}
+
+function closeNav4() {
+  document.getElementById("myNav4").style.width = "0%";
 }
 </script>
 <br><br>
