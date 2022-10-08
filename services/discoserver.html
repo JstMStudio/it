@@ -597,6 +597,20 @@ text-align: center;
   font-size: 15px;
   font-weight: bold;
 }
+
+.collapsible1 {
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .content1 {
   padding: 0 18px;
   display: none;
@@ -940,7 +954,7 @@ function myFunction12() {
 <h1>Guildato</h1>
   <p>Benvenuto nella sezione Gilda di Discoserver! Un luogo da esplorare e trovare un sacco di bot Guilded e server della comunità. Un luogo da esplorare per altre comunità di cui non hai mai sentito parlare. </p>
   <br>
-  <button type="button" class="collapsible">Server</button>
+  <button type="button" class="collapsible1">Server</button>
 <div class="content1">
 <p>Colleghiamo insieme utenti e server per formare un server di comunità attivo. Un luogo in cui gli utenti incontrano un server con la nicchia che gli piace o desiderano.</p><br>
 <input type="text" id="myInput3" onkeyup="myFunction13()" placeholder="Cerca il nome del server.." title="Digita un nome" style="background-color:blue;color:orange; ">
@@ -962,7 +976,7 @@ function myFunction12() {
   <li><div><a href="#">Nessuno</a>a</div></li>
 </ul>
 <script>
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible1");
 var i;
 
 for (i = 0; i < coll.length; i++) {
